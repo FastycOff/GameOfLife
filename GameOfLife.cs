@@ -12,19 +12,20 @@ namespace GameOfLife
         static void Main(string[] args)
         {
             int Gen = 0;
-            string[,] map = new string[Share.Params.Size+1, Share.Params.Size+1];
-            Controller.Arrays.Fill(map);
+            string[,] Map = new string[Share.Params.Size+1, Share.Params.Size+1];
+            Controller.Arrays.Fill(Map);
             //uncomment and delete random in "ArrayFill to see glaider"
-            //map[4, 6] = "o"; 
-            //map[5, 7] = "o"; 
-            //map[6, 5] = "o"; 
-            //map[6,6] = "o"; 
-            //map[6, 7] = "o";
+            // Map[4, 6] = "o"; 
+            // Map[5, 7] = "o"; 
+            // Map[6, 5] = "o"; 
+            // Map[6,6] = "o"; 
+            // Map[6, 7] = "o";
             while (true)
             {
-                Controller.Moves.Check(map);
-                map = Controller.Moves.Do(map, Controller.Moves.toadd, Controller.Moves.todel);
-                Controller.Arrays.Print(map);
+                Controller.Moves.Check(Map); // просчитывание ходов
+                Map = Controller.Moves.Do(Map, Controller.Moves.toadd, Controller.Moves.todel); // Выполнение ходов и сохранение в массив map
+
+                Controller.Arrays.Print(Map); // Вывод всех точек
                 Gen++;
                 Console.WriteLine("Generation:" + Gen);
                 Thread.Sleep(250);

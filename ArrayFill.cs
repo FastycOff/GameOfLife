@@ -15,7 +15,7 @@ namespace Controller
             {
                 for (int x = 0; x < Share.Params.Size+1; ++x)
                 {
-                    arr[y, x] = (rand.Next(1, 7) == 1) ? "o" : " ";
+                    arr[y, x] = (rand.Next(1, 11) == 1) ? "o" : " ";
                 }
             }
             return arr;
