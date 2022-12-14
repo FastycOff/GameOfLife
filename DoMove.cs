@@ -4,18 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Move
+namespace Controller
 {
-    class Program
+    public partial class Moves
     {
-        static void Main(string[] args)
-        {
-        }
-        
-    }
-    public class Do
-    {
-        public static string[,] Move(string[,] arr, int[] toadd, int[] todel)
+        public static string[,] Do(string[,] arr, int[] toadd, int[] todel)
         {
             short coord = 0;
             int y=0, x=0;

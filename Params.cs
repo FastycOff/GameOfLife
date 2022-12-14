@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Share
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-        }
-    }
     public class Params
     {
-        public static int Size= 45;
+        public static int Size= 110;
     }
 }

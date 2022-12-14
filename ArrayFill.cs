@@ -4,15 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArrayFill
+namespace Controller
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-        }
-    }
-    public class Array
+    public partial class Arrays
     {
         public static string[,] Fill(string[,] arr)
         {

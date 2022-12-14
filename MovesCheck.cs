@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovesCheck
+namespace Controller
 {
-    class MovesCheck
+    public partial class Moves
     {
-        static void Main(string[] args)
-        {
-
-        }
-        public static int first(string[,] arr, int x, int y)
+        public static int Precalculation(string[,] arr, int x, int y)
         {
             int n = 0;
             if (y == 0 & x == 0)
@@ -89,9 +85,6 @@ namespace MovesCheck
             }
             return n;
         }
-    }
-    public class Move
-    {
         public static int[] todel = new int[2];
         public static int[] toadd = new int[2];
         public static void Check(string[,] arr)
@@ -101,9 +94,9 @@ namespace MovesCheck
             int delpointer = 0, addpointer = 0;
             for(int y = 0; y < Share.Params.Size+1; ++y)
             {
-                for(int x = 0; x < Share.Params.Size + 1; ++x)
+                for(int x = 0; x < Share.Params.Size+1; ++x)
                 {
-                    switch (MovesCheck.first(arr, x, y))
+                    switch (Moves.Precalculation(arr, x, y))
                     {
                         case 0: todel[delpointer] = y; todel[++delpointer] = x; ++delpointer; break;
                         case 1: todel[delpointer] = y; todel[++delpointer] = x; ++delpointer; break;
