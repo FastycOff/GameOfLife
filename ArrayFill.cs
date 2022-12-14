@@ -1,1 +1,2 @@
-﻿sd
+﻿def main():
+    print(1)
