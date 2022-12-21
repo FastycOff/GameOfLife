@@ -1,0 +1,1 @@
+csc .\GameOfLife\Params.cs .\GameOfLife\GameOfLife.cs .\GameOfLife\Arrays\*.cs .\GameOfLife\Moves\*.cs
