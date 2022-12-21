@@ -8,6 +8,6 @@ namespace Share
 {
     public class Params
     {
-        public static int Size= 110;
+        public static int Size= 50;
     }
 }

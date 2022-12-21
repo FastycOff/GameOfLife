@@ -8,7 +8,7 @@ namespace Controller
 {
     public partial class Arrays
     {
-        public static string[,] Fill(string[,] arr)
+        public static string[,] FillRandoms(string[,] arr)
         {
             var rand = new Random();
             for (int y = 0; y < Share.Params.Size+1; ++y)
