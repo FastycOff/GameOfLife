@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Share
 {
-    public static int Size= 50;
+    public static int Size= 100;
 }
     
 

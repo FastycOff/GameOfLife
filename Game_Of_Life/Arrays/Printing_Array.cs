@@ -9,15 +9,17 @@ namespace Controller
     {
         public static void Print(string[,] arr)
         {
-            Console.Clear();
+            string map = "";
             for (int y = 0; y < Share.Size+1; ++y)
             {
                 for (int x = 0; x < Share.Size+1; ++x)
                 {
-                    Console.Write(arr[y, x]);
+                    map += arr[y, x];
                 }
-                Console.Write("\n");
+                map += "\n";
             }
+            Console.Clear();
+            Console.Write(map);
         }
     }
 }

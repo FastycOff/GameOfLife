@@ -2,7 +2,7 @@
 {
     public partial class Moves
     {
-        public static int Precalculate(string[,] arr, int x, int y)
+        public static int Calculate(string[,] arr, int x, int y)
         {
             int n = 0;
             if (y == 0 & x == 0)

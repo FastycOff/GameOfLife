@@ -8,7 +8,7 @@ namespace Controller
 {
     public partial class Arrays
     {
-        public static string[,] Fill(string[,] arr)
+        public static void Fill(string[,] arr)
         {
             var rand = new Random();
             for (int y = 0; y < Share.Size+1; ++y)
@@ -18,7 +18,6 @@ namespace Controller
                     arr[y, x] = (rand.Next(1, 11) == 1) ? "o" : " ";
                 }
             }
-            return arr;
         }
     }
 }

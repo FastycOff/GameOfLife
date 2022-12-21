@@ -9,12 +9,10 @@ namespace Controller
             {
                 for(int x = 0; x < Share.Size+1; ++x)
                 {
-                    switch (Moves.Precalculate(arr, x, y))
-                    {
-                        case 2: Map2[y,x] = arr[y,x]; break;
-                        case 3: Map2[y,x] = "o"; break;
-                        default: Map2[y,x] = " "; break;
-                    }
+                    int neighbors = Moves.Calculate(arr, x, y);
+                    if (arr[y,x] == " " && neighbors == 3) Map2[y,x] = "o";
+                    else if (arr[y,x] == "o" && (neighbors == 3 || neighbors == 2)) Map2[y,x] = "o";
+                    else Map2[y,x] = " ";
                 }
             }
             return Map2;
