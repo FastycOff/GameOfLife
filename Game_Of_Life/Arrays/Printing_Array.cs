@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace Controller
 {    public partial class Arrays
     {
-        public static void Print(string[,] arr)
+        public static void Print()
         {
             string map = "";
             for (int y = 0; y < Share.Size+1; ++y)
             {
                 for (int x = 0; x < Share.Size+1; ++x)
                 {
-                    map += arr[y, x];
+                    map += Share.Map[y, x];
                 }
                 map += "\n";
             }

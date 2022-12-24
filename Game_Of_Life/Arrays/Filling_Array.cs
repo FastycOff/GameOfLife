@@ -8,14 +8,14 @@ namespace Controller
 {
     public partial class Arrays
     {
-        public static void Fill(string[,] arr)
+        public static void Fill()
         {
             var rand = new Random();
             for (int y = 0; y < Share.Size+1; ++y)
             {
                 for (int x = 0; x < Share.Size+1; ++x)
                 {
-                    arr[y, x] = (rand.Next(1, 11) == 1) ? "o" : " ";
+                    Share.Map[y, x] = (rand.Next(1, 11) == 1) ? "o" : " ";
                 }
             }
         }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Threading;
 
 namespace GameOfLife
@@ -12,15 +9,14 @@ namespace GameOfLife
         static void Main(string[] args)
         {
             int Gen = 0;
-            string[,] Map = new string[Share.Size+1, Share.Size+1];
-            Controller.Arrays.Fill(Map);
+            Controller.Arrays.Fill();
             while (true)
             {
-                Map = Controller.Moves.Do(Map); // просчитывание ходов
-                Controller.Arrays.Print(Map); // Вывод всех точек
+                Controller.Moves.Do(); // просчитывание ходов
+                Controller.Arrays.Print(); // Вывод всех точек
                 Gen++;
                 Console.WriteLine("Generation:" + Gen);
-                Thread.Sleep(250);
+                Thread.Sleep(25);
             }
         }
     }
